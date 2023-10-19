@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'KittiMonoDatasetMonoCon'
-data_root = 'data/kitti/'
+data_root = '/root/autodl-tmp/'
 class_names = ['Pedestrian', 'Cyclist', 'Car']
 input_modality = dict(
     use_lidar=False,

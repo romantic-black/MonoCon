@@ -44,12 +44,12 @@ class CocoDataset(CustomDataset):
         Returns:
             list[dict]: Annotation info from COCO api.
         """
-        if not getattr(pycocotools, '__version__', '0') >= '12.0.2':
-            raise AssertionError(
-                'Incompatible version of pycocotools is installed. '
-                'Run pip uninstall pycocotools first. Then run pip '
-                'install mmpycocotools to install open-mmlab forked '
-                'pycocotools.')
+        # if not getattr(pycocotools, '__version__', '0') >= '2.0.2':
+        #     raise AssertionError(
+        #         'Incompatible version of pycocotools is installed. '
+        #         'Run pip uninstall pycocotools first. Then run pip '
+        #         'install mmpycocotools to install open-mmlab forked '
+        #         'pycocotools.')
 
         self.coco = COCO(ann_file)
         self.cat_ids = self.coco.get_cat_ids(cat_names=self.CLASSES)
